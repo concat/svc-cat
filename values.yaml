@@ -51,7 +51,7 @@ apiserver:
     # Type of service; valid values are "LoadBalancer", "NodePort" or "ClusterIP"
     # NodePort is useful if deploying on bare metal or hacking locally on
     # minikube
-    type: NodePort
+    type: LoadBalancer
     # Further configuration for services of type NodePort
     nodePort:
       # Available port in allowable range (e.g. 30000 - 32767 on minikube)
@@ -168,7 +168,7 @@ controllerManager:
     # Type of service; valid values are "LoadBalancer", "NodePort" and "ClusterIP"
     # NodePort is useful if deploying on bare metal or hacking locally on
     # minikube
-    type: ClusterIP
+    type: LoadBalancer
     # Further configuration for services of type NodePort
     nodePort:
       # Available port in allowable range (e.g. 30000 - 32767 on minikube)
