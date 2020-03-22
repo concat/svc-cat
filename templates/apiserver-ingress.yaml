@@ -10,7 +10,7 @@ metadata:
     alb.ingress.kubernetes.io/backend-protocol: HTTPS
 spec:
   rules:
-    - https:
+    - http:
         paths:
           - path: /*
             backend:
