@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: catalog-catalog-apiserver
+  labels:
+    app: catalog-catalog-apiserver
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/backend-protocol: HTTPS
+spec:
+  rules:
+    - https:
+        paths:
+          - path: /*
+            backend:
+              serviceName: catalog-catalog-apiserver
+              servicePort: 443
